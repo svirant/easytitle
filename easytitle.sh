@@ -71,10 +71,8 @@ elif [[ "$key" = "" ]]; then
     sleep 0
 else
     piir play -r 2 --gpio $pin --file $commander $key
-fi
-
-if [[ "$key" == "+" ]]; then
-sleep 0.6
+    if [[ "$key" == "+" ]]; then sleep 0.6
+    fi
 fi
 
 done
